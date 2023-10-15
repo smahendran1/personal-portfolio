@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset= "UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title> Smithi's Personal Portfolio</title>
+    <link rel= "stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2212284ffa.js" crossorigin="anonymous"></script>
+</head>
+
+<!-- everything above is the standard format, copypaste-->
+<body>
+<div id="header">
+<div class="container">
+
+   <nav>
+ <img src="smithi-low-resolution-logo-color-on-transparent-background.png" class ="logo"> 
+   <div class="list">
+ <ul id= "sidemenu">
+    <li><a href="#header">Home</a></li>
+    <li><a href="#about">About Me</a></li>
+     <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <ul><a class="close" href="#" on click="closemenu()">x</a></ul>
+   </ul>
+  <ul> <li><a class="close" href="#"on click="openmenu()">Menu</a></li> </ul>
+</div>
+</nav>
+<div class="header-text">
+<p> UI/UX Designer + Backend Dev</p>
+<h1>Hey! I'm <span>Smithi </span><br>Mahendran</h1>
+</div>
+
+</div>
+    
+</div>
+<!------about------- -->     
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+            <img src= "Screenshot 2023-07-14 at 9.35.53 PM.jpeg"></div>
+            <div class="about-col-2">
+            <h1 class= "sub-title1">About Me</h1>
+            <p>I'm a computer science student at the University of Maryland seeking to gain internship experience in the fields of software engineering, network engineering, cybersecurity, or blockchain engineering.</p>
+        
+        <div class="tab-titles">
+        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+        <p class="tab-links" onclick="opentab('experience')" >Experience</p>
+        <p class="tab-links" onclick="opentab('education')">Education</p>
+    </div>
+    <div class="tab-contents active-tab" id="skills">
+        <ul>
+            <li><span>UI/UX<br></span>Designing Web/App Interfaces </li>
+            <li><span>OOP<br></span>Java, Python, C++    
+
+
+            </li>
+        </ul>
+    </div>
+    <div class="tab-contents" id="experience">
+        <ul>
+            <li><span>May 2020-Present<br></span>Web Development Workshop Founder </li>
+            <li><span>Jun 2022-Sept 2022<br></span>Illinois Tech Game Design Intern   </li>
+            <li><span>May 2022-Jul 2022<br></span>Illinois Tech Cybersecurity Intern   </li>
+            <li><span>Apr 2022-Sept 2022<br></span>New York Academy of Sciences Research Intern   </li>
+            <li><span>Jun 2022-Aug 2022<br></span>Quest Student Research Institute Intern   </li>
+       
+        </ul>
+    </div>
+    <div class="tab-contents" id="education">
+        <ul>
+            <li><span>2023-2027<br></span> University of Maryland, Computer Science</li>
+            <li><span>2023<br></span>HS Diploma from Downingtown East HS </li>
+        </ul>
+    </div>
+    
+
+    
+        </div>
+        
+    </div>
+
+
+</div>
+</div> 
+
+<!-- SERVICES SECTION-->
+<div id="services">
+    <div class="container">
+        <h1 class= "sub-title1">My Services</h1>
+        <div class="services-list">
+            <div> 
+                <i class="fa-sharp fa-solid fa-code fa-bounce"></i>
+                <h2>Web Design</h2>
+                <p>Proficiency in website design</p>
+                <a href = "https://github.com/smahendran1/youtube-website">Learn more</a>
+            </div>
+            <div> 
+                <i class="fa-brands fa-python fa-bounce"></i>
+                <h2>Object Oriented Programming</h2>
+                <p>Java, C++, Python</p>
+                <a href = "https://github.com/smahendran1/slotmachine-python">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-gamepad fa-bounce"></i>
+                <h2>Game Development</h2>
+                <p>In Progress</p>
+                <a href = "https://github.com/smahendran1">Learn more</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+
+<script>
+    var sidemenu= document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+
+
+
+<!--PORTFOLIO SECTION-->
+   <div id="portfolio">
+    <div class="container">
+        
+<h1 class="sub-title">My Work</h1>
+<div class="work-list"> 
+    <div class="work">
+        <img src="slotmachine.jpeg" width="400px" height="300px">
+        <div class="layer">
+            
+            <b><h2>Python Slot Machine Game</h2></b>
+            <p>Thrilling chance-based game where players set high stakes, spin the reels, and aim to align matching symbols to win prizes.</p>
+        <a href="https://github.com/smahendran1/slotmachine-python"><i class="fa-solid fa-up-right-from-square"></i></a>
+        </div>
+    </div>
+    <div class="work">
+        <img src="mail.png" width="400px" height="300px">
+        <div class="layer">
+         
+            <b><h2>SMTP Server</h2></b>
+            <p>Developed a SMTP server utilizing Springboot concepts such as dependency injection, profiles, and annotations</p>
+            <a href="https://github.com/smahendran1/mailSender"><i class="fa-solid fa-up-right-from-square"></i></a>
+        </div>
+        
+    </div>
+    <div class="work">
+        <img src="youtube.png" width="400px" height="300px">
+        <div class="layer">
+           
+            <b><h2>Rebuilding YouTube</h2></b>
+            <p>Rebuilt YouTube interface using HTML and CSS on VSCode. Achieved a responsive design and ensured cross-browser compatibility.</p>
+            <a href="https://github.com/smahendran1/youtube-website"><i class="fa-solid fa-up-right-from-square"></i></a>
+        </div>
+        
+</div>
+    </div>
+    
+</div> 
+<a href="https://github.com/smahendran1" class="btn"> See More </a> </div>
+
+<!-- CONTACTS SECTION -- ---------------------->
+<div id="contact">
+    <div class="container"> 
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>smithi.mahendran@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/smithi-mahendran-a1194a243/"> <i class="fa-brands fa-linkedin"></i> </a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="Message" rows="6" placeholder="Talk to me :D" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright"></div>
+    <p>Copyright 2023 © Smithi Mahendran</p>
+</div>
+
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyRFhHiWyJ-lXiVVFSfeSW9ghcbpXrwGFQMIQDlB4VFelbGX6l_w2Mpy1mDq4W2vqdO/exec'
+    const form = document.forms[' ']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
